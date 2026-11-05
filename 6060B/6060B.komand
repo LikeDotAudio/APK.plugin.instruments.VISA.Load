@@ -1233,7 +1233,7 @@
       "description": "Error",
       "returns": {
         "count": 1,
-        "type": "NR2"
+        "type": "ERROR"
       },
       "group": "System Utilities",
       "subsystem": "SYSTem"
