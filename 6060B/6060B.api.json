@@ -198,7 +198,7 @@
         "returns": {
           "count": 1,
           "type": "NR3",
-          "unit": "V"
+          "unit": "A"
         },
         "mqtt": {
           "topic": "APK.audio/Gui/Komands/Load/Get_Curr_Lev_Trig",
@@ -279,7 +279,7 @@
         "returns": {
           "count": 1,
           "type": "NR3",
-          "unit": "V"
+          "unit": "A"
         },
         "mqtt": {
           "topic": "APK.audio/Gui/Komands/Load/Get_Curr_Tlev",
@@ -2476,7 +2476,7 @@
         "returns": {
           "count": 1,
           "type": "NR3",
-          "unit": "V"
+          "unit": "A"
         },
         "mqtt": {
           "topic": "APK.audio/Gui/Komands/Load/Get_Curr_Lev_Trig",
@@ -2600,7 +2600,7 @@
         "returns": {
           "count": 1,
           "type": "NR3",
-          "unit": "V"
+          "unit": "A"
         },
         "mqtt": {
           "topic": "APK.audio/Gui/Komands/Load/Get_Curr_Tlev",

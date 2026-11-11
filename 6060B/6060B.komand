@@ -851,7 +851,7 @@
       "returns": {
         "count": 1,
         "type": "NR3",
-        "unit": "V"
+        "unit": "A"
       },
       "subsystem": "CURR",
       "unverified": true
@@ -911,7 +911,7 @@
       "returns": {
         "count": 1,
         "type": "NR3",
-        "unit": "V"
+        "unit": "A"
       },
       "subsystem": "CURR"
     },
