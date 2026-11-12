@@ -72,9 +72,9 @@
     "do": "Zero-argument execution actions and trigger commands"
   },
   "summary": {
-    "total_commands": 128,
+    "total_commands": 145,
     "get_count": 47,
-    "set_count": 38,
+    "set_count": 55,
     "nab_count": 49,
     "rig_count": 1,
     "do_count": 40
@@ -1621,6 +1621,52 @@
         },
         "unverified": true
       },
+      "Set_Curr_Prot_Stat_OFF": {
+        "command": "Set_Curr_Prot_Stat_OFF",
+        "verb": "set",
+        "description": "Set_Curr_Prot_Stat \u2192 OFF. Enable or disable overcurrent protection",
+        "scpi": "CURR:PROT:STAT OFF",
+        "subsystem": "CURR",
+        "group": "CURR",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Curr_Prot_Stat_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Curr_Prot_Stat_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Curr_Prot_Stat_ON": {
+        "command": "Set_Curr_Prot_Stat_ON",
+        "verb": "set",
+        "description": "Set_Curr_Prot_Stat \u2192 ON. Enable or disable overcurrent protection",
+        "scpi": "CURR:PROT:STAT ON",
+        "subsystem": "CURR",
+        "group": "CURR",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Curr_Prot_Stat_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Curr_Prot_Stat_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Current_Range": {
         "command": "Set_Current_Range",
         "verb": "set",
@@ -1731,6 +1777,52 @@
         },
         "unverified": false
       },
+      "Set_Inp_OFF": {
+        "command": "Set_Inp_OFF",
+        "verb": "set",
+        "description": "Set_Inp \u2192 OFF. Engage or release the load input",
+        "scpi": "INP OFF",
+        "subsystem": "INPut",
+        "group": "Input Control",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Inp_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Inp_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Inp_ON": {
+        "command": "Set_Inp_ON",
+        "verb": "set",
+        "description": "Set_Inp \u2192 ON. Engage or release the load input",
+        "scpi": "INP ON",
+        "subsystem": "INPut",
+        "group": "Input Control",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Inp_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Inp_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Inp_Shor_Stat": {
         "command": "Set_Inp_Shor_Stat",
         "verb": "set",
@@ -1754,6 +1846,52 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Inp_Shor_Stat",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Inp_Shor_Stat_OFF": {
+        "command": "Set_Inp_Shor_Stat_OFF",
+        "verb": "set",
+        "description": "Set_Inp_Shor_Stat \u2192 OFF. Close or open the input short across the load terminals",
+        "scpi": "INP:SHOR:STAT OFF",
+        "subsystem": "INP",
+        "group": "INP",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Inp_Shor_Stat_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Inp_Shor_Stat_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Inp_Shor_Stat_ON": {
+        "command": "Set_Inp_Shor_Stat_ON",
+        "verb": "set",
+        "description": "Set_Inp_Shor_Stat \u2192 ON. Close or open the input short across the load terminals",
+        "scpi": "INP:SHOR:STAT ON",
+        "subsystem": "INP",
+        "group": "INP",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Inp_Shor_Stat_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Inp_Shor_Stat_ON",
             "value": "<value>",
             "input_name": "value"
           }
@@ -1789,6 +1927,75 @@
           }
         },
         "unverified": false
+      },
+      "Set_Mode_CURR": {
+        "command": "Set_Mode_CURR",
+        "verb": "set",
+        "description": "Set_Mode \u2192 CURR. Select the operating mode",
+        "scpi": "MODE:CURR",
+        "subsystem": "MODE",
+        "group": "CC / CV / CR",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Mode_CURR",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Mode_CURR",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Mode_RES": {
+        "command": "Set_Mode_RES",
+        "verb": "set",
+        "description": "Set_Mode \u2192 RES. Select the operating mode",
+        "scpi": "MODE:RES",
+        "subsystem": "MODE",
+        "group": "CC / CV / CR",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Mode_RES",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Mode_RES",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Mode_VOLT": {
+        "command": "Set_Mode_VOLT",
+        "verb": "set",
+        "description": "Set_Mode \u2192 VOLT. Select the operating mode",
+        "scpi": "MODE:VOLT",
+        "subsystem": "MODE",
+        "group": "CC / CV / CR",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Mode_VOLT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Mode_VOLT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Port0": {
         "command": "Set_Port0",
@@ -2163,6 +2370,75 @@
         },
         "unverified": false
       },
+      "Set_Transient_Mode_CONT": {
+        "command": "Set_Transient_Mode_CONT",
+        "verb": "set",
+        "description": "Set_Transient_Mode \u2192 CONT. Set Transient Mode",
+        "scpi": "TRAN:MODE CONT",
+        "subsystem": "TRANsient",
+        "group": "Pulse & Dynamic Loading",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Transient_Mode_CONT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Transient_Mode_CONT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Transient_Mode_PULS": {
+        "command": "Set_Transient_Mode_PULS",
+        "verb": "set",
+        "description": "Set_Transient_Mode \u2192 PULS. Set Transient Mode",
+        "scpi": "TRAN:MODE PULS",
+        "subsystem": "TRANsient",
+        "group": "Pulse & Dynamic Loading",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Transient_Mode_PULS",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Transient_Mode_PULS",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Transient_Mode_TOGG": {
+        "command": "Set_Transient_Mode_TOGG",
+        "verb": "set",
+        "description": "Set_Transient_Mode \u2192 TOGG. Set Transient Mode",
+        "scpi": "TRAN:MODE TOGG",
+        "subsystem": "TRANsient",
+        "group": "Pulse & Dynamic Loading",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Transient_Mode_TOGG",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Transient_Mode_TOGG",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Tran_Stat": {
         "command": "Set_Tran_Stat",
         "verb": "set",
@@ -2191,6 +2467,52 @@
           }
         },
         "unverified": false
+      },
+      "Set_Tran_Stat_OFF": {
+        "command": "Set_Tran_Stat_OFF",
+        "verb": "set",
+        "description": "Set_Tran_Stat \u2192 OFF. Enable or disable transient (pulse) operation",
+        "scpi": "TRAN:STAT OFF",
+        "subsystem": "TRANsient",
+        "group": "Pulse & Dynamic Loading",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Tran_Stat_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Tran_Stat_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Tran_Stat_ON": {
+        "command": "Set_Tran_Stat_ON",
+        "verb": "set",
+        "description": "Set_Tran_Stat \u2192 ON. Enable or disable transient (pulse) operation",
+        "scpi": "TRAN:STAT ON",
+        "subsystem": "TRANsient",
+        "group": "Pulse & Dynamic Loading",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Tran_Stat_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Tran_Stat_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Tran_Twid": {
         "command": "Set_Tran_Twid",
@@ -2243,6 +2565,75 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trig_Sour",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trig_Sour_BUS": {
+        "command": "Set_Trig_Sour_BUS",
+        "verb": "set",
+        "description": "Set_Trig_Sour \u2192 BUS. Select the trigger source \u2014 BUS, EXT, HOLD, LINE or TIM",
+        "scpi": "TRIG:SOUR BUS",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Trig_Sour_BUS",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trig_Sour_BUS",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trig_Sour_EXT": {
+        "command": "Set_Trig_Sour_EXT",
+        "verb": "set",
+        "description": "Set_Trig_Sour \u2192 EXT. Select the trigger source \u2014 BUS, EXT, HOLD, LINE or TIM",
+        "scpi": "TRIG:SOUR EXT",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Trig_Sour_EXT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trig_Sour_EXT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trig_Sour_HOLD": {
+        "command": "Set_Trig_Sour_HOLD",
+        "verb": "set",
+        "description": "Set_Trig_Sour \u2192 HOLD. Select the trigger source \u2014 BUS, EXT, HOLD, LINE or TIM",
+        "scpi": "TRIG:SOUR HOLD",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Set_Trig_Sour_HOLD",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trig_Sour_HOLD",
             "value": "<value>",
             "input_name": "value"
           }

@@ -4,7 +4,7 @@
 
 Generated from the `.komand` table by `apkaudio-komand build-trees`. Edit the table, not this file.
 
-**128 commands** — SET 38 · RIG 1 · NAB 49 · DO 40 · 86 unverified (67%)
+**145 commands** — SET 55 · RIG 1 · NAB 49 · DO 40 · 103 unverified (71%)
 
 `SET` one argument · `RIG` several applied together · `NAB` a query · `DO` a parameterless action. **†** marks a command swept out of a manual and never sent to the instrument.
 
@@ -24,6 +24,8 @@ Several statements in one message, so they hang off no single branch. Every stat
 - `CHAN` — **SET** `Set_Chan` · `<value>` · args: `value` · numeric · †<br>Select the electronic load channel this command stream addresses (INST is an alias)
 - `CURR` — **SET** `Set_Current_Level` · `<value>` · args: `value` · numeric (A)
 - `INP` — **SET** `Set_Inp` · `<state>` · args: `state` · bool: `OFF` | `ON`<br>Engage or release the load input
+- `INP` — **SET** `Set_Inp_OFF` · `OFF` · †<br>Set_Inp → OFF. Engage or release the load input
+- `INP` — **SET** `Set_Inp_ON` · `ON` · †<br>Set_Inp → ON. Engage or release the load input
 - `PORT0` — **SET** `Set_Port0` · `<value>` · args: `value` · †<br>Set the state of the rear-panel digital port 0 output
 - `RES` — **SET** `Set_Resistance_Level` · `<value>` · args: `value` · numeric (Ohm)
 - `VOLT` — **SET** `Set_Voltage_Level` · `<value>` · args: `value` · numeric (V)
@@ -65,6 +67,8 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `DEL` — **SET** `Set_Curr_Prot_Del` · `<value>` · args: `value` · numeric (A) · †<br>Set how long an overcurrent may persist before the input is turned off
     - `LEV` — **SET** `Set_Curr_Prot_Lev` · `<value>` · args: `value` · numeric (V) · †<br>Set the overcurrent protection level
     - `STAT` — **SET** `Set_Curr_Prot_Stat` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable overcurrent protection
+    - `STAT` — **SET** `Set_Curr_Prot_Stat_OFF` · `OFF` · †<br>Set_Curr_Prot_Stat → OFF. Enable or disable overcurrent protection
+    - `STAT` — **SET** `Set_Curr_Prot_Stat_ON` · `ON` · †<br>Set_Curr_Prot_Stat → ON. Enable or disable overcurrent protection
     - `DEL` — **DO** `Do_Curr_Prot_Del` · †<br>72 Remote Operation
     - `LEV` — **DO** `Do_Curr_Prot_Lev` · †<br>CR Mode Example
     - `STAT` — **DO** `Do_Curr_Prot_Stat` · †<br>CR Mode Example
@@ -77,6 +81,8 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `CLE` — **DO** `Do_Input_Prot_Cle` · †<br>Resetting Latched Protection
   - **`SHOR`**
     - `STAT` — **SET** `Set_Inp_Shor_Stat` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Close or open the input short across the load terminals
+    - `STAT` — **SET** `Set_Inp_Shor_Stat_OFF` · `OFF` · †<br>Set_Inp_Shor_Stat → OFF. Close or open the input short across the load terminals
+    - `STAT` — **SET** `Set_Inp_Shor_Stat_ON` · `ON` · †<br>Set_Inp_Shor_Stat → ON. Close or open the input short across the load terminals
     - `STAT?` — **NAB** `Get_Inp_Shor_Stat` · → BOOL · †<br>Query the input short state
 - **`INPUT`**
   - `SHORT` — **DO** `Do_Input_Short` · †<br>Short On/Off
@@ -92,6 +98,9 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `DC?` — **NAB** `Get_Meas_Volt_Dc` · → NR3 V · †<br>Measure the DC voltage across the load input
 - **`MODE`**
   - `<value>` — **SET** `Set_Mode` · args: `value` · enum: `CURR` | `RES` | `VOLT`<br>Select the operating mode
+  - `CURR` — **SET** `Set_Mode_CURR` · †<br>Set_Mode → CURR. Select the operating mode
+  - `RES` — **SET** `Set_Mode_RES` · †<br>Set_Mode → RES. Select the operating mode
+  - `VOLT` — **SET** `Set_Mode_VOLT` · †<br>Set_Mode → VOLT. Select the operating mode
   - `CURR` — **DO** `Set_Mode_Current`
   - `RES` — **DO** `Set_Mode_Resistance`
   - `VOLT` — **DO** `Set_Mode_Voltage`
@@ -133,10 +142,15 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `ERR?` — **NAB** `Error` · → ERROR
 - **`TRAN`**
   - `STAT` — **SET** `Set_Tran_Stat` · `<value>` · args: `value` · bool: `OFF` | `ON`<br>Enable or disable transient (pulse) operation
+  - `STAT` — **SET** `Set_Tran_Stat_OFF` · `OFF` · †<br>Set_Tran_Stat → OFF. Enable or disable transient (pulse) operation
+  - `STAT` — **SET** `Set_Tran_Stat_ON` · `ON` · †<br>Set_Tran_Stat → ON. Enable or disable transient (pulse) operation
   - `TWID` — **SET** `Set_Tran_Twid` · `<value>` · args: `value` · numeric (s) · †<br>Set the transient pulse width
   - `DCYC` — **SET** `Set_Transient_Duty` · `<value>` · args: `value` · numeric (%)
   - `FREQ` — **SET** `Set_Transient_Freq` · `<value>` · args: `value` · numeric (Hz)
   - `MODE` — **SET** `Set_Transient_Mode` · `<mode>` · args: `mode` · enum: `CONT` | `PULS` | `TOGG`
+  - `MODE` — **SET** `Set_Transient_Mode_CONT` · `CONT` · †<br>Set_Transient_Mode → CONT. Set Transient Mode
+  - `MODE` — **SET** `Set_Transient_Mode_PULS` · `PULS` · †<br>Set_Transient_Mode → PULS. Set Transient Mode
+  - `MODE` — **SET** `Set_Transient_Mode_TOGG` · `TOGG` · †<br>Set_Transient_Mode → TOGG. Set Transient Mode
   - `DCYC?` — **NAB** `Get_Tran_Dcyc` · → NR3 %<br>Query the transient duty cycle
   - `FREQ?` — **NAB** `Get_Tran_Freq` · → NR3 Hz<br>Query the transient frequency
   - `MODE?` — **NAB** `Get_Tran_Mode` · → CRD<br>Query the transient mode — CONT, PULS or TOGG
@@ -148,6 +162,9 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `STAT` — **DO** `Transient_ON` · `ON`
 - **`TRIG`**
   - `SOUR` — **SET** `Set_Trig_Sour` · `<value>` · args: `value` · enum: `BUS` | `EXT` | `HOLD` · †<br>Select the trigger source — BUS, EXT, HOLD, LINE or TIM
+  - `SOUR` — **SET** `Set_Trig_Sour_BUS` · `BUS` · †<br>Set_Trig_Sour → BUS. Select the trigger source — BUS, EXT, HOLD, LINE or TIM
+  - `SOUR` — **SET** `Set_Trig_Sour_EXT` · `EXT` · †<br>Set_Trig_Sour → EXT. Select the trigger source — BUS, EXT, HOLD, LINE or TIM
+  - `SOUR` — **SET** `Set_Trig_Sour_HOLD` · `HOLD` · †<br>Set_Trig_Sour → HOLD. Select the trigger source — BUS, EXT, HOLD, LINE or TIM
   - `TIM` — **SET** `Set_Trig_Tim` · `<value>` · args: `value` · numeric (s) · †<br>Set the internal trigger timer period
   - `SOUR?` — **NAB** `Get_Trig_Sour` · → CRD · †<br>Query the trigger source
   - `TIM?` — **NAB** `Get_Trig_Tim` · → NR3 s · †<br>Query the internal trigger timer period

@@ -153,6 +153,20 @@
       ],
       "unverified": true
     },
+    "Set_Curr_Prot_Stat_OFF": {
+      "scpi": "CURR:PROT:STAT OFF",
+      "description": "Set_Curr_Prot_Stat → OFF. Enable or disable overcurrent protection",
+      "subsystem": "CURR",
+      "unverified": true,
+      "notes": "Individual of selector Set_Curr_Prot_Stat = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Curr_Prot_Stat_ON": {
+      "scpi": "CURR:PROT:STAT ON",
+      "description": "Set_Curr_Prot_Stat → ON. Enable or disable overcurrent protection",
+      "subsystem": "CURR",
+      "unverified": true,
+      "notes": "Individual of selector Set_Curr_Prot_Stat = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Current_Range": {
       "scpi": "CURR:RANG <value>",
       "description": "Set Current Range",
@@ -212,6 +226,22 @@
       "subsystem": "INPut",
       "notes": "The two-way form of Input_ON / Input_OFF. On a 300 W sink the half that matters most is OFF, and a switch bound to Input_ON cannot send it."
     },
+    "Set_Inp_OFF": {
+      "scpi": "INP OFF",
+      "description": "Set_Inp → OFF. Engage or release the load input",
+      "subsystem": "INPut",
+      "group": "Input Control",
+      "unverified": true,
+      "notes": "Individual of selector Set_Inp = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Inp_ON": {
+      "scpi": "INP ON",
+      "description": "Set_Inp → ON. Engage or release the load input",
+      "subsystem": "INPut",
+      "group": "Input Control",
+      "unverified": true,
+      "notes": "Individual of selector Set_Inp = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Inp_Shor_Stat": {
       "scpi": "INP:SHOR:STAT <value>",
       "description": "Close or open the input short across the load terminals",
@@ -227,6 +257,20 @@
         "value"
       ],
       "unverified": true
+    },
+    "Set_Inp_Shor_Stat_OFF": {
+      "scpi": "INP:SHOR:STAT OFF",
+      "description": "Set_Inp_Shor_Stat → OFF. Close or open the input short across the load terminals",
+      "subsystem": "INP",
+      "unverified": true,
+      "notes": "Individual of selector Set_Inp_Shor_Stat = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Inp_Shor_Stat_ON": {
+      "scpi": "INP:SHOR:STAT ON",
+      "description": "Set_Inp_Shor_Stat → ON. Close or open the input short across the load terminals",
+      "subsystem": "INP",
+      "unverified": true,
+      "notes": "Individual of selector Set_Inp_Shor_Stat = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Mode": {
       "scpi": "MODE:<value>",
@@ -245,6 +289,30 @@
       "group": "CC / CV / CR",
       "subsystem": "MODE",
       "notes": "The mode is a HEADER on this instrument, not a parameter: `MODE CURR` is rejected with -113 Undefined header, and so is `FUNC CURR`. `MODE:CURR` and `FUNC:CURR` are both accepted — all four verified on 44.44.44.111 gpib7,22 against a drained error queue. The placeholder therefore sits inside the header, which fill_placeholders substitutes just the same, giving one command a three-position selector can drive where Set_Mode_Current / _Resistance / _Voltage are three."
+    },
+    "Set_Mode_CURR": {
+      "scpi": "MODE:CURR",
+      "description": "Set_Mode → CURR. Select the operating mode",
+      "subsystem": "MODE",
+      "group": "CC / CV / CR",
+      "unverified": true,
+      "notes": "Individual of selector Set_Mode = CURR — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Mode_RES": {
+      "scpi": "MODE:RES",
+      "description": "Set_Mode → RES. Select the operating mode",
+      "subsystem": "MODE",
+      "group": "CC / CV / CR",
+      "unverified": true,
+      "notes": "Individual of selector Set_Mode = RES — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Mode_VOLT": {
+      "scpi": "MODE:VOLT",
+      "description": "Set_Mode → VOLT. Select the operating mode",
+      "subsystem": "MODE",
+      "group": "CC / CV / CR",
+      "unverified": true,
+      "notes": "Individual of selector Set_Mode = VOLT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Port0": {
       "scpi": "PORT0 <value>",
@@ -437,6 +505,30 @@
       ],
       "subsystem": "TRANsient"
     },
+    "Set_Transient_Mode_CONT": {
+      "scpi": "TRAN:MODE CONT",
+      "description": "Set_Transient_Mode → CONT. Set Transient Mode",
+      "subsystem": "TRANsient",
+      "group": "Pulse & Dynamic Loading",
+      "unverified": true,
+      "notes": "Individual of selector Set_Transient_Mode = CONT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Transient_Mode_PULS": {
+      "scpi": "TRAN:MODE PULS",
+      "description": "Set_Transient_Mode → PULS. Set Transient Mode",
+      "subsystem": "TRANsient",
+      "group": "Pulse & Dynamic Loading",
+      "unverified": true,
+      "notes": "Individual of selector Set_Transient_Mode = PULS — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Transient_Mode_TOGG": {
+      "scpi": "TRAN:MODE TOGG",
+      "description": "Set_Transient_Mode → TOGG. Set Transient Mode",
+      "subsystem": "TRANsient",
+      "group": "Pulse & Dynamic Loading",
+      "unverified": true,
+      "notes": "Individual of selector Set_Transient_Mode = TOGG — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Tran_Stat": {
       "scpi": "TRAN:STAT <value>",
       "description": "Enable or disable transient (pulse) operation",
@@ -453,6 +545,22 @@
       "group": "Pulse & Dynamic Loading",
       "subsystem": "TRANsient",
       "notes": "The two-way form of Transient_ON / Transient_OFF."
+    },
+    "Set_Tran_Stat_OFF": {
+      "scpi": "TRAN:STAT OFF",
+      "description": "Set_Tran_Stat → OFF. Enable or disable transient (pulse) operation",
+      "subsystem": "TRANsient",
+      "group": "Pulse & Dynamic Loading",
+      "unverified": true,
+      "notes": "Individual of selector Set_Tran_Stat = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Tran_Stat_ON": {
+      "scpi": "TRAN:STAT ON",
+      "description": "Set_Tran_Stat → ON. Enable or disable transient (pulse) operation",
+      "subsystem": "TRANsient",
+      "group": "Pulse & Dynamic Loading",
+      "unverified": true,
+      "notes": "Individual of selector Set_Tran_Stat = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Tran_Twid": {
       "scpi": "TRAN:TWID <value>",
@@ -484,6 +592,27 @@
         "value"
       ],
       "unverified": true
+    },
+    "Set_Trig_Sour_BUS": {
+      "scpi": "TRIG:SOUR BUS",
+      "description": "Set_Trig_Sour → BUS. Select the trigger source — BUS, EXT, HOLD, LINE or TIM",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trig_Sour = BUS — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trig_Sour_EXT": {
+      "scpi": "TRIG:SOUR EXT",
+      "description": "Set_Trig_Sour → EXT. Select the trigger source — BUS, EXT, HOLD, LINE or TIM",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trig_Sour = EXT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trig_Sour_HOLD": {
+      "scpi": "TRIG:SOUR HOLD",
+      "description": "Set_Trig_Sour → HOLD. Select the trigger source — BUS, EXT, HOLD, LINE or TIM",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trig_Sour = HOLD — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trig_Tim": {
       "scpi": "TRIG:TIM <value>",

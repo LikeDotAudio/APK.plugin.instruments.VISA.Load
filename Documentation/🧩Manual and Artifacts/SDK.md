@@ -14,7 +14,7 @@ Every Load model this library drives, and how to drive it. Each model answers th
 
 | Model | Maker | get | set | nab | rig | do | Port |
 |---|---|---:|---:|---:|---:|---:|---:|
-| [6060B](SDK/6060B.md) | HP / Agilent / Keysight | 47 | 38 | 49 | 1 | 40 | 15700 |
-| [6063B](SDK/6063B.md) | HP / Agilent / Keysight | 47 | 38 | 49 | 1 | 40 | 15701 |
-| [EL30000](SDK/EL30000.md) | HP / Agilent / Keysight | 47 | 38 | 49 | 1 | 40 | 15702 |
-| [N3300A](SDK/N3300A.md) | HP / Agilent / Keysight | 47 | 38 | 49 | 1 | 40 | 15703 |
+| [6060B](SDK/6060B.md) | HP / Agilent / Keysight | 47 | 55 | 49 | 1 | 40 | 15700 |
+| [6063B](SDK/6063B.md) | HP / Agilent / Keysight | 47 | 55 | 49 | 1 | 40 | 15701 |
+| [EL30000](SDK/EL30000.md) | HP / Agilent / Keysight | 47 | 55 | 49 | 1 | 40 | 15702 |
+| [N3300A](SDK/N3300A.md) | HP / Agilent / Keysight | 47 | 55 | 49 | 1 | 40 | 15703 |

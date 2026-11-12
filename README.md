@@ -16,10 +16,10 @@ The **Load** instruments of the APK.audio bench, as one thing: 4 models, their c
 
 | Model | Maker | What | Commands | Table | API |
 |---|---|---|---:|:---:|---|
-| [6060B](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/6060B.md) | HP / Agilent / Keysight | DC Electronic Load (300W, 60V, 60A) | 128 | ✅ | :15700 |
-| [6063B](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/6063B.md) | HP / Agilent / Keysight | DC Electronic Load (250W, 240V, 10A) | 128 |  | :15701 |
-| [EL30000](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/EL30000.md) | HP / Agilent / Keysight | Bench DC Electronic Load (Modern) | 128 |  | :15702 |
-| [N3300A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/N3300A.md) | HP / Agilent / Keysight | Modular Load Mainframe (1800W) | 128 |  | :15703 |
+| [6060B](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/6060B.md) | HP / Agilent / Keysight | DC Electronic Load (300W, 60V, 60A) | 145 | ✅ | :15700 |
+| [6063B](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/6063B.md) | HP / Agilent / Keysight | DC Electronic Load (250W, 240V, 10A) | 145 |  | :15701 |
+| [EL30000](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/EL30000.md) | HP / Agilent / Keysight | Bench DC Electronic Load (Modern) | 145 |  | :15702 |
+| [N3300A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/N3300A.md) | HP / Agilent / Keysight | Modular Load Mainframe (1800W) | 145 |  | :15703 |
 
 ## Layout
 
