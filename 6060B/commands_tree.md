@@ -54,12 +54,12 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `TLEV` — **SET** `Set_Transient_Level_B` · `<value>` · args: `value` · numeric (A)
   - `RANG?` — **NAB** `Get_Curr_Rang` · → NR3 A · †<br>Query the current range
   - `SLEW?` — **NAB** `Get_Curr_Slew` · → NR3 A/s<br>Query the current slew rate
-  - `TLEV?` — **NAB** `Get_Curr_Tlev` · → NR3 V<br>Query the transient current level
+  - `TLEV?` — **NAB** `Get_Curr_Tlev` · → NR3 A<br>Query the transient current level
   - `PROT` — **DO** `Do_Curr_Prot` · †<br>Software Current Limit
   - `TRIG` — **DO** `Do_Curr_Trig` · †<br>Triggered Current Level
   - **`LEV`**
     - `TRIG` — **SET** `Set_Curr_Lev_Trig` · `<value>` · args: `value` · numeric (V) · †<br>Set the current level the load takes on when triggered
-    - `TRIG?` — **NAB** `Get_Curr_Lev_Trig` · → NR3 V · †<br>Query the triggered current level
+    - `TRIG?` — **NAB** `Get_Curr_Lev_Trig` · → NR3 A · †<br>Query the triggered current level
     - `TRIG` — **DO** `Do_Curr_Lev_Trig` · †<br>PROGRAM 2
   - **`PROT`**
     - `DEL` — **SET** `Set_Curr_Prot_Del` · `<value>` · args: `value` · numeric (A) · †<br>Set how long an overcurrent may persist before the input is turned off
@@ -73,6 +73,7 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`INP`**
   - `STAT?` — **NAB** `Get_Inp_Stat` · → BOOL<br>Query whether the load input is on (OUTP is an alias for INP)
   - **`PROT`**
+    - `CLE` — **DO** `Clear_Protection`
     - `CLE` — **DO** `Do_Input_Prot_Cle` · †<br>Resetting Latched Protection
   - **`SHOR`**
     - `STAT` — **SET** `Set_Inp_Shor_Stat` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Close or open the input short across the load terminals
@@ -94,8 +95,6 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `CURR` — **DO** `Set_Mode_Current`
   - `RES` — **DO** `Set_Mode_Resistance`
   - `VOLT` — **DO** `Set_Mode_Voltage`
-- **`PROT`**
-  - `CLE` — **DO** `Clear_Protection`
 - **`RES`**
   - `TLEV` — **SET** `Set_Res_Tlev` · `<value>` · args: `value` · numeric (V) · †<br>Set the transient resistance level
   - `RANG` — **SET** `Set_Resistance_Range` · `<value>` · args: `value` · numeric (Ohm)
@@ -131,7 +130,7 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `ENAB?` — **NAB** `Get_Stat_Ques_Enab` · → NR1 · †<br>Query the Questionable Status enable mask
     - `EVEN?` — **NAB** `Get_Stat_Ques_Even` · → NR1 · †<br>Read and clear the Questionable Status event register
 - **`SYST`**
-  - `ERR?` — **NAB** `Error` · → NR2
+  - `ERR?` — **NAB** `Error` · → ERROR
 - **`TRAN`**
   - `STAT` — **SET** `Set_Tran_Stat` · `<value>` · args: `value` · bool: `OFF` | `ON`<br>Enable or disable transient (pulse) operation
   - `TWID` — **SET** `Set_Tran_Twid` · `<value>` · args: `value` · numeric (s) · †<br>Set the transient pulse width

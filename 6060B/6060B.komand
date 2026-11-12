@@ -681,11 +681,19 @@
       "group": "Input Control",
       "subsystem": "INPut"
     },
+    "Clear_Protection": {
+      "scpi": "INP:PROT:CLE",
+      "description": "Clear Protection",
+      "group": "Input Control",
+      "subsystem": "INPut",
+      "notes": "Was `PROT:CLE`: the table generator cut the `INPut` parent off, so the unit heard a root `PROTection` it does not have (-113 \"Undefined header\"). Full path from the Electronic Load Family Programming Manual 06060-90005, p. 50 (`INP:PROT:CLEar`) (scpi_paths.py, 2026-11-11)."
+    },
     "Do_Input_Prot_Cle": {
       "scpi": "INP:PROT:CLE",
       "description": "Resetting Latched Protection",
       "subsystem": "INP",
-      "unverified": true
+      "unverified": true,
+      "alias_of": "Clear_Protection"
     },
     "Do_Input_Short": {
       "scpi": "INPUT:SHORT",
@@ -711,12 +719,6 @@
       "description": "Set Mode Voltage",
       "group": "CC / CV / CR",
       "subsystem": "MODE"
-    },
-    "Clear_Protection": {
-      "scpi": "PROT:CLE",
-      "description": "Clear Protection",
-      "group": "Input Control",
-      "subsystem": "INPut"
     },
     "Do_Res_Tlev": {
       "scpi": "RES:TLEV",

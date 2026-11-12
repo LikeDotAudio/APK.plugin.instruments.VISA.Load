@@ -1,0 +1,33 @@
+{
+  "model": "6060B",
+  "manual": "HP Electronic Load Family Programming Manual 06060-90005 (6050A/6051A/6060B/6063B), Chapter 4 Language Dictionary; [SOURce:] is the default node",
+  "roots": [
+    "ABORt",
+    "CALibration",
+    "CHANnel",
+    "INSTrument",
+    "INPut",
+    "OUTPut",
+    "MEASure",
+    "FETCh",
+    "MODE",
+    "CURRent",
+    "VOLTage",
+    "RESistance",
+    "TRANsient",
+    "FUNCtion",
+    "PORT0",
+    "STATus",
+    "SYSTem",
+    "TRIGger",
+    "SOURce",
+    "DIAGnostic"
+  ],
+  "optional": [
+    "SOURce",
+    "IMMediate",
+    "LEVel",
+    "SEQuence"
+  ],
+  "unresolved": {}
+}

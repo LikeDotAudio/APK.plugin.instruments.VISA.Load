@@ -27,3 +27,11 @@ Edition 3, September 1991, update April 2000 — the Programming Reference the 6
 The manual shows these commands do not exist. Each entry stays in the table with `"retired": true` and its citation in `retired_because`; KOMAND never sends it, check-tables skips it, and it still counts toward the commands floor.
 
 - `nab/Get_Meas_All` — Agilent Electronic Load Family Programming Manual 06060-90005 p. 51 (https://xdevs.com/doc/HP_Agilent_Keysight/HP%206050A,%206051A%20Programming.pdf): MEASure has CURRent?, POWer?, VOLTage? only — no MEAS:ALL?
+
+## SCPI paths — every header against the model's own tree (scpi_paths.py, 2026-11-11)
+
+The tree: `6060B.scpi.json`, read off HP Electronic Load Family Programming Manual 06060-90005 (6050A/6051A/6060B/6063B), Chapter 4 Language Dictionary; [SOURce:] is the default node. Each entry's `notes` / `retired_because` carries the full reason and page; the 33220A's Certify of 2026-11-11 (199 tries) and the GUI-certificate book are the bench evidence. Nothing was sent to verify.
+
+| Command | Change | Was |
+|---|---|---|
+| `do/Clear_Protection` | scpi → `INP:PROT:CLE` | was `PROT:CLE` |

@@ -4213,6 +4213,27 @@
         },
         "unverified": false
       },
+      "Clear_Protection": {
+        "command": "Clear_Protection",
+        "verb": "do",
+        "description": "Clear Protection",
+        "scpi": "INP:PROT:CLE",
+        "subsystem": "INPut",
+        "group": "Input Control",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Load/Clear_Protection",
+          "direction": "in",
+          "payload_format": {
+            "command": "Clear_Protection"
+          }
+        },
+        "unverified": false
+      },
       "Do_Input_Prot_Cle": {
         "command": "Do_Input_Prot_Cle",
         "verb": "do",
@@ -4315,27 +4336,6 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Mode_Voltage"
-          }
-        },
-        "unverified": false
-      },
-      "Clear_Protection": {
-        "command": "Clear_Protection",
-        "verb": "do",
-        "description": "Clear Protection",
-        "scpi": "PROT:CLE",
-        "subsystem": "INPut",
-        "group": "Input Control",
-        "args": [],
-        "arg": {
-          "kind": "none"
-        },
-        "returns": null,
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Load/Clear_Protection",
-          "direction": "in",
-          "payload_format": {
-            "command": "Clear_Protection"
           }
         },
         "unverified": false
